@@ -1,0 +1,80 @@
+:root {
+  --width: 300px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  padding-left: 52px;
+}
+
+nav {
+  position: absolute;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 57px;
+  background-color: rgb(4, 4, 4);
+  overflow: hidden;
+  left: 0;
+  top: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+nav:hover {
+  width: var(--width);
+}
+
+nav .bar {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: end;
+}
+
+nav .user {
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 38px;
+  height: 180px;
+  width: var(--width);
+  transform: translateX(-300px);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  -webkit-transition: transform 0.3s ease, opacity 0.3s ease;
+  -moz-transition: transform 0.3s ease, opacity 0.3s ease;
+  -ms-transition: transform 0.3s ease, opacity 0.3s ease;
+  -o-transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+nav .user img {
+  width: 100px;
+  margin: 0 auto;
+  border-radius: 25%;
+  -webkit-border-radius: 25%;
+  -moz-border-radius: 25%;
+  -ms-border-radius: 25%;
+  -o-border-radius: 25%;
+}
+
+nav:hover .user {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+nav .links a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  width: var(--width);
+  overflow: hidden;
+}
+
+nav .links a .icon {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
